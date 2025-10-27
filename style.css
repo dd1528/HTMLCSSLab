@@ -1,0 +1,195 @@
+* {
+   box-sizing: border-box;
+}
+body, section, header, div, p, h1, h2, h3, ul, li, figure, figcaption {
+   margin: 0;
+   padding: 0;
+}
+body {
+   font-family: 'Open Sans', sans-serif;
+   box-sizing: border-box;
+   background-color: #F0F4F8;
+   font-weight: 300;
+}
+
+/* Header styling */
+header {
+   background-image: url(images/hero.jpg);
+   background-size: cover;
+   background-position: center;
+   width: 100%;
+   min-height: 500px;
+}
+
+/* Navigation styling */
+nav {
+   background-image: url(images/logo.svg);
+   background-size: 60px;
+   background-repeat: no-repeat;
+   background-position: 10px 5px;
+   padding: 20px;
+   height: 100px;
+}
+
+nav ul {
+   margin-left: 80px;
+}
+
+nav li {
+   display: inline-block;
+   list-style-type: none;
+}
+
+nav a {
+   color: #51279b;
+   text-decoration: none;
+   padding: 10px;
+   font-weight: 600;
+}
+
+nav a:visited {
+   color: #8662c7;
+}
+
+nav a:hover {
+   color: #8662c7;
+   text-decoration: underline;
+}
+
+/* Hero text positioning and styling */
+header div {
+   margin: 100px 0 0 80px;
+   color: white;
+}
+
+header h2 {
+   font-size: 48px;
+   margin-bottom: 0.5rem;
+}
+
+header p {
+   font-size: 24px;
+   margin-bottom: 1.5rem;
+}
+
+/* Hero button styling */
+header div a {
+   background-color: #51279b;
+   color: white;
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 5px;
+   display: inline-block;
+}
+
+header div a:hover {
+   background-color: #8662c7;
+}
+
+/* Card layout */
+main {
+   max-width: 1200px;
+   margin: 40px auto;
+   padding: 0 20px;
+}
+
+.card {
+   float: left;
+   width: calc(33.333% - 20px);
+   margin: 10px;
+   background-color: white;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   display: block;
+}
+
+.card div {
+   padding: 20px;
+}
+
+.card h3 {
+   font-size: 20px;
+   font-weight: 600;
+   margin-bottom: 10px;
+   color: #333;
+}
+
+.card .description {
+   font-size: 14px;
+   color: #666;
+   margin-bottom: 15px;
+   line-height: 1.5;
+}
+
+/* Social metrics */
+.social {
+   display: flex;
+   gap: 20px;
+   font-size: 14px;
+   color: #999;
+}
+
+.social span {
+   display: inline-flex;
+   align-items: center;
+   gap: 5px;
+}
+
+/* Heart icon (favorites) */
+.heart::before {
+   content: "♥";
+   color: #ff6b6b;
+   font-size: 16px;
+}
+
+/* Comment icon */
+.comment::before {
+   content: "💬";
+   font-size: 14px;
+}
+
+/* Clear floats */
+main::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+   .card {
+      float: none;
+      width: 100%;
+      margin: 20px 0;
+   }
+   
+   header div {
+      margin: 60px 20px 0 20px;
+   }
+   
+   header h2 {
+      font-size: 36px;
+   }
+   
+   header p {
+      font-size: 18px;
+   }
+   
+   nav ul {
+      margin-left: 0;
+      text-align: center;
+   }
+   
+   nav {
+      background-position: center 5px;
+      padding-top: 70px;
+      height: auto;
+   }
+}
